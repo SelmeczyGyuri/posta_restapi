@@ -1,0 +1,24 @@
+info:
+  name: add-county
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://localhost:8000/api/counties
+  body:
+    type: json
+    data: |-
+      {
+        "name": "APITESZT",
+        "crest_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7mZ_yj-rrunhTvhscL4MD_P_U3InB3Ypy6_MkNgVIRmk5oR5LqDWPWdw&s=10"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
