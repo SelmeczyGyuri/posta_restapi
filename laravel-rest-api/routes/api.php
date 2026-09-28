@@ -3,6 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CountiesController;
+use App\Http\Controllers\CitiesController;
+
+Route::get('/cities', [CitiesController::class, 'index']);
+Route::post('/cities', [CitiesController::class, 'store'])->middleware('auth:sanctum');
+Route::patch('/cities/{id}', [CitiesController::class, 'update'])->middleware('auth:sanctum');
+Route::delete('/cities/{id}', [CitiesController::class, 'destroy'])->middleware('auth:sanctum');
 
 Route::get('/counties', [CountiesController::class, 'index']);
 Route::post('/counties', [CountiesController::class, 'store'])->middleware('auth:sanctum');

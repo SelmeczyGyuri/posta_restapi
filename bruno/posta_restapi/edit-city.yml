@@ -1,0 +1,23 @@
+info:
+  name: edit-city
+  type: http
+  seq: 10
+
+http:
+  method: PATCH
+  url: http://localhost:8000/api/cities/3580
+  body:
+    type: json
+    data: |-
+      {
+        "city": "APIMODOSITASTESZT"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

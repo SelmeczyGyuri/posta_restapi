@@ -1,0 +1,26 @@
+info:
+  name: add-city
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: http://localhost:8000/api/cities
+  body:
+    type: json
+    data: |-
+      {
+        "zip_code": 9999,
+        "city": "APITESZT",
+        "id_county": 20,
+        "population": 99999
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

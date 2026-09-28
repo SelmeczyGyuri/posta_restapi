@@ -1,0 +1,15 @@
+info:
+  name: users
+  type: http
+  seq: 8
+
+http:
+  method: OPTIONS
+  url: http://localhost:8000/api/users
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
