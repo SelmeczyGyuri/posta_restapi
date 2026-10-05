@@ -12,4 +12,9 @@ class County extends Model
         'name',
         'crest_url',
     ];
+
+    public function cities()
+    {
+        return $this->hasMany(City::class, 'id_county');
+    }
 }

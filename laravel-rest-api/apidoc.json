@@ -1,0 +1,5 @@
+{
+    "name": "Kozgaz API",
+    "version": "1.0.0",
+    "description": "Megyék és városok REST API - keresés, szűrés, rendezés és CRUD műveletek"
+}

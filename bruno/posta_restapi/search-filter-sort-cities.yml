@@ -1,0 +1,29 @@
+info:
+  name: search-filter-sort-cities
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: http://localhost:8000/api/cities?search=sze&county=3&sort_by=city&sort_dir=desc
+  params:
+    - name: search
+      value: sze
+      type: query
+    - name: county
+      value: "3"
+      type: query
+    - name: sort_by
+      value: city
+      type: query
+    - name: sort_dir
+      value: desc
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

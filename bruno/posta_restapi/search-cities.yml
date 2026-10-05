@@ -1,0 +1,20 @@
+info:
+  name: search-cities
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: http://localhost:8000/api/cities?search=aba
+  params:
+    - name: search
+      value: aba
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -14,4 +14,9 @@ class City extends Model
         'id_county',
         'population',
     ];
+
+    public function county()
+    {
+        return $this->belongsTo(County::class, 'id_county');
+    }
 }

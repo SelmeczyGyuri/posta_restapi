@@ -1,0 +1,26 @@
+info:
+  name: search-sort-counties
+  type: http
+  seq: 14
+
+http:
+  method: GET
+  url: http://localhost:8000/api/counties?search=pest&sort_by=name&sort_dir=asc
+  params:
+    - name: search
+      value: pest
+      type: query
+    - name: sort_by
+      value: name
+      type: query
+    - name: sort_dir
+      value: asc
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
